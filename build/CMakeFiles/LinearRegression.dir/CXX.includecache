@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspaces/OOP_TinyProject/LinearRegression.cpp
+iostream
+-
+fstream
+-
+sstream
+-
+vector
+-
+cmath
+-
+string
+-
+algorithm
+-
+cstdlib
+-
+Matrix.h
+/workspaces/OOP_TinyProject/Matrix.h
+Vector.h
+/workspaces/OOP_TinyProject/Vector.h
+
+/workspaces/OOP_TinyProject/Matrix.h
+Vector.h
+/workspaces/OOP_TinyProject/Vector.h
+
+/workspaces/OOP_TinyProject/Vector.h
+

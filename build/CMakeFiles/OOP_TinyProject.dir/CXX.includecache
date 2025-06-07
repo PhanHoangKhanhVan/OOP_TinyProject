@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspaces/OOP_TinyProject/LinearSystem.h
+Matrix.h
+/workspaces/OOP_TinyProject/Matrix.h
+Vector.h
+/workspaces/OOP_TinyProject/Vector.h
+
+/workspaces/OOP_TinyProject/Matrix.cpp
+Matrix.h
+/workspaces/OOP_TinyProject/Matrix.h
+LinearSystem.h
+/workspaces/OOP_TinyProject/LinearSystem.h
+cassert
+-
+cmath
+-
+algorithm
+-
+
+/workspaces/OOP_TinyProject/Matrix.h
+Vector.h
+/workspaces/OOP_TinyProject/Vector.h
+
+/workspaces/OOP_TinyProject/Vector.h
+
