@@ -4,8 +4,8 @@
 #include <vector>
 #include <cmath>
 #include <string>
-#include <algorithm> // để dùng random_shuffle
-#include <cstdlib>   // rand
+#include <algorithm> 
+#include <cstdlib>  
 #include "Matrix.h"
 #include "Vector.h"
 
@@ -13,7 +13,7 @@
 std::pair<Matrix, Vector> LoadDataset(const std::string& filename) {
     std::ifstream file(filename);
     if (!file.is_open()) {
-        std::cerr << "Không thể mở file: " << filename << std::endl;
+        std::cerr << "Can not open file: " << filename << std::endl;
         exit(1);
     }
 
@@ -38,10 +38,10 @@ std::pair<Matrix, Vector> LoadDataset(const std::string& filename) {
         features.push_back(row);
     }
 
-    std::cout << "Dữ liệu đọc được: " << features.size() << " dòng\n";
+    std::cout << "Data can be read: " << features.size() << " line\n";
 
     int n = features.size();
-    Matrix A(n, 7); // bias + 6 đặc trưng
+    Matrix A(n, 7); 
     Vector b(n);
 
     for (int i = 0; i < n; ++i) {
@@ -54,7 +54,6 @@ std::pair<Matrix, Vector> LoadDataset(const std::string& filename) {
     return {A, b};
 }
 
-// Hàm xáo trộn dữ liệu ngẫu nhiên
 void ShuffleDataset(Matrix& A, Vector& b) {
     int n = A.Rows();
     std::vector<int> indices(n);
@@ -75,7 +74,6 @@ void ShuffleDataset(Matrix& A, Vector& b) {
     b = b_shuffled;
 }
 
-// Chia dữ liệu thành train/test (80/20)
 void SplitTrainTest(const Matrix& A, const Vector& b,
                     Matrix& A_train, Vector& b_train,
                     Matrix& A_test, Vector& b_test) {
@@ -104,7 +102,6 @@ void SplitTrainTest(const Matrix& A, const Vector& b,
     std::cout << "Train size: " << train_size << ", Test size: " << total - train_size << std::endl;
 }
 
-// Tính sai số RMSE
 double RMSE(const Matrix& A, const Vector& b, const Vector& x) {
     Vector pred = A * x;
     double sum = 0.0;
@@ -113,11 +110,10 @@ double RMSE(const Matrix& A, const Vector& b, const Vector& x) {
     return std::sqrt(sum / b.Size());
 }
 
-// Hàm main
 int main() {
     auto [A, b] = LoadDataset("machine.data");
 
-    ShuffleDataset(A, b); // ✅ Xáo trộn trước khi chia
+    ShuffleDataset(A, b); 
 
     Matrix A_train, A_test;
     Vector b_train, b_test;
