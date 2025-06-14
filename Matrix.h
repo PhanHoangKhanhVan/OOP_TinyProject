@@ -9,16 +9,16 @@ private:
     double** mData;
 
 public:
-    Matrix();                            // Constructor mặc định
-    Matrix(int rows, int cols);         // Constructor khởi tạo
-    Matrix(const Matrix& other);        // Copy constructor
-    ~Matrix();                          // Destructor
+    Matrix();                           
+    Matrix(int rows, int cols);         
+    Matrix(const Matrix& other);       
+    ~Matrix();                         
 
     int Rows() const;
     int Cols() const;
 
-    double& operator()(int i, int j);        // Truy cập 1-based
-    double operator()(int i, int j) const;   // Const version
+    double& operator()(int i, int j);       
+    double operator()(int i, int j) const;   
 
     Matrix& operator=(const Matrix& other);
     Matrix operator+(const Matrix& other) const;

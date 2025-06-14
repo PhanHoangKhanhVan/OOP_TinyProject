@@ -180,6 +180,3 @@ Matrix Matrix::Inverse() const {
             inv(i + 1, j + 1) = aug(i + 1, j + 1 + n);
     return inv;
 }
-
-// Các hàm PseudoInverse, Determinant, Inverse giữ nguyên như bạn đã viết
-// Không nhắc lại để tránh quá dài, bạn có thể chép từ phần trước

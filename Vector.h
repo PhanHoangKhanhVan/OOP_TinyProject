@@ -7,17 +7,17 @@ private:
     double* mData;
 
 public:
-    Vector();                        // Constructor mặc định
-    Vector(int size);               // Constructor có kích thước
-    Vector(const Vector& other);    // Copy constructor
-    ~Vector();                      // Destructor
+    Vector();                       
+    Vector(int size);               
+    Vector(const Vector& other);  
+    ~Vector();                      
 
     int Size() const;
 
-    double& operator[](int i);           // Truy cập 0-based có sửa
-    double operator[](int i) const;      // Const version
+    double& operator[](int i);         
+    double operator[](int i) const;     
 
-    double operator()(int i) const;      // Truy cập 1-based
+    double operator()(int i) const;    
 
     Vector& operator=(const Vector& other);
     Vector operator+(const Vector& other) const;
